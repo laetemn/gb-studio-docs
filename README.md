@@ -1,35 +1,34 @@
 # Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Este site foi criado usando [Docusaurus 2](https://docusaurus.io/), um gerador de sites estáticos moderno.
 
-### Installation
+### Instalação
 
 ```
 $ yarn
 ```
 
-### Local Development
+### Desenvolvimento local
 
 ```
 $ yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Este comando inicia um servidor de desenvolvimento local e abre uma janela do navegador. A maioria das alterações são refletidas ao vivo sem precisar reiniciar o servidor.
 
-### Build
+### Construir
 
 ```
 $ yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Este comando gera conteúdo estático no diretório `build` e pode ser disponibilizado usando qualquer serviço de hospedagem de conteúdo estático.
 
-## Localisation
+## Localização
 
-### Adding a new locale
+### Adicionando um novo local
 
-Add your new locale to `./docusaurus.config.js` by adding a new country code to the `locales` array and adding the locale label to `localeConfigs`.
-
+Adicione sua nova localidade ao `./docusaurus.config.js` adicionando um novo código de país ao array `locales` e adicionando o rótulo de localidade ao `localeConfigs`.
 
 ```
   i18n: {
@@ -44,30 +43,31 @@ Add your new locale to `./docusaurus.config.js` by adding a new country code to 
       },      
 ```
 
-Create a new folder for the locale Markdown files
+Crie uma nova pasta para os arquivos Markdown de localidade
 
 ```bash
 mkdir -p i18n/LOCALE_CODE/docusaurus-plugin-content-docs/current
 # e.g. mkdir -p i18n/de/docusaurus-plugin-content-docs/current
 ```
 
-Then copy the current English files to your locale 
+Em seguida, copie os arquivos em inglês atuais para o seu idioma
+
 ```bash
 cp -r docs/* i18n/LOCALE_CODE/docusaurus-plugin-content-docs/current
 # e.g. cp -r docs/* i18n/de/docusaurus-plugin-content-docs/current
 ```
 
-### Updating locale content
+### Atualizando o conteúdo local
 
-You can edit the files in `i18n/LOCALE_CODE/docusaurus-plugin-content-docs/current` to update your locale's content.
+Você pode editar os arquivos em `i18n/LOCALE_CODE/docusaurus-plugin-content-docs/current` para atualizar o conteúdo do seu idioma.
 
-You can run your locale's site locally by using 
+Você pode executar o site do seu local localmente usando
 
 ```
 $ yarn start -- --locale LOCALE_CODE
 ```
 
-e.g. to run the German site
+e.g. para executar o site Alemão
 
 ```
 $ yarn start -- --locale de
